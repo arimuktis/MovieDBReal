@@ -2,12 +2,13 @@ package com.example.moviemovieapp.data.remote
 
 import android.os.Parcelable
 import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class Movies(
-    val dates: Dates,
+    val dates: @RawValue Dates,
     val page: Int, // 1
-    val results: List<Result>,
+    val results: @RawValue List<Result>,
     val total_pages: Int, // 46
     val total_results: Int // 907
 ):Parcelable {
